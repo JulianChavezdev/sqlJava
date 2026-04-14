@@ -13,9 +13,9 @@ A small shop needs an application to manage its customer database. The system al
 ```
 src/
 ├── model/
-│   └── Cliente.java          # Customer entity POJO
+│   └── Customer.java          # Customer entity POJO
 ├── dao/
-│   └── ClienteDAO.java       # Interface/class containing all data access operations
+│   └── CustomerDAO.java       # Interface/class containing all data access operations
 └── main/
     └── Main.java             # Main class that executes all operations
 
@@ -26,7 +26,7 @@ src/
 🧩 Entities
 -----------
 
-### `Cliente` (Customer)
+### `Customer` 
 
 POJO class representing a shop customer.
 
@@ -45,7 +45,7 @@ POJO class representing a shop customer.
 ⚙️ DAO Operations
 -----------------
 
-The `ClienteDAO` implements the following operations:
+The `CustomerDAO` implements the following operations:
 
 ### Basic CRUD
 
@@ -93,7 +93,7 @@ The `Main` class executes **all DAO operations** sequentially.
 
 ### Important Considerations
 
--   For **insertion, update, and deletion** operations, the same `Cliente` object is used for the three consecutive operations.
+-   For **insertion, update, and deletion** operations, the same `Customer` object is used for the three consecutive operations.
 
 -   The `Main` class is designed to be **executed multiple times** without the query results varying between runs (query idempotency).
 
